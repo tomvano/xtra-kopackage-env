@@ -23,7 +23,7 @@
             "Xtra\\KoPackage\\Environment\\": ""
         },
         "files": [
-            "src/helpers.php"
+            "Environment/helpers.php"
         ]
     }
 }
