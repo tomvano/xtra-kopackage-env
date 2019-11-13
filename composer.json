@@ -21,6 +21,9 @@
     "autoload": {
         "psr-4": {
             "Xtra\\KoPackage\\": "src"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     }
 }
