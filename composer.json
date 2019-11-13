@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Xtra\\KoPackage\\": "src"
+            "Xtra\\KoPackage\\Environment\\": ""
         },
         "files": [
             "src/helpers.php"
