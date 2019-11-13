@@ -1,5 +1,5 @@
 {
-    "name": "tomvano/xtra-kopackage/env",
+    "name": "tomvano/xtra-kopackage-env",
     "type": "library",
     "description": "Package used for implementing enviroment variables",
     "keywords": ["env", "environment", "xtra", "kohana", "koseven"],
