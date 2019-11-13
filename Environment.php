@@ -9,19 +9,19 @@ class Environment {
     protected $filename = '.env';
     protected $directory;
 
-    public function register($directory){
-        
+    public function register($directory)
+    {
         $this->set_directory($directory);
-        $this->format_location();
         
+        $location = $this->get_location();
         if( ! file_exists($location) ){
-            die('bestaat ni');
+            die('bestaat ni ' . $location);
         } elseif( !is_readable($location) ){
-            die('niet leesbaar');
+            die('niet leesbaar ' . $location);
         }
         
         $dotenv = new Dotenv();
-        $dotenv->load(DOCROOT . '/.env');
+        $dotenv->load($location);
     }
     
     public function set_directory(string $directory) : self
@@ -36,14 +36,12 @@ class Environment {
         return $this;
     }
     
-    protected function format_location(){
-
+    protected function get_location() : string
+    {
         $directory = rtrim($this->directory, '/');
         $filename = ltrim($this->filename, '/');
         
-        $this->location = $directory . '/' . $filename;
-        
-        return $this;
+        return $directory . '/' . $filename;
     }
     
 }
