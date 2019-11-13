@@ -1,12 +1,8 @@
 <?php
 
-namespace Xtra\KoPackage\Environment\Exception
-/**
- * Thrown when a file does not exist or is not readable.
- *
- * @author Fabien Potencier <fabien@symfony.com>
- */
-final class PathException 
+namespace Xtra\KoPackage\Environment\Exception;
+
+final class LocationException extends Exception implements Throwable
 {
     public function __construct(string $path, int $code = 0, \Exception $previous = null)
     {

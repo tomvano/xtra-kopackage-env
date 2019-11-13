@@ -2,7 +2,9 @@
 
 namespace Xtra\KoPackage\Environment;
 
+use Xtra\KoPackage\Environment\Exception\PathException;
 use Symfony\Component\Dotenv\Dotenv;
+
 
 class Environment {
 
@@ -14,10 +16,8 @@ class Environment {
         $this->set_directory($directory);
         
         $location = $this->get_location();
-        if( ! file_exists($location) ){
-            die('bestaat ni ' . $location);
-        } elseif( !is_readable($location) ){
-            die('niet leesbaar ' . $location);
+        if ( !is_readable($location) || is_dir($location)) {
+            throw new LocationException($location);
         }
         
         $dotenv = new Dotenv();
