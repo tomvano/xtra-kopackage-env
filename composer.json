@@ -1,0 +1,26 @@
+{
+    "name": "tomvano/xtra-kopackage/env",
+    "type": "library",
+    "description": "Package used for implementing enviroment variables",
+    "keywords": ["env", "environment", "xtra", "kohana", "koseven"],
+    "homepage": "https://www.xtradigital.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom van Overloop",
+            "email": "tom@xtradigital.com",
+            "homepage": "https://www.xtradigital.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1.3",
+        "symfony/dotenv": "^4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Environment": "src/"
+        }
+    }
+}
