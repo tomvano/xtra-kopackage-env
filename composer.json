@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Xtra\\KoPackage\\Environment\\": "src/"
+            "Xtra\\KoPackage\\": "src"
         }
     }
 }
