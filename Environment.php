@@ -2,7 +2,7 @@
 
 namespace Xtra\KoPackage\Environment;
 
-use Xtra\KoPackage\Environment\Exception\PathException;
+use Xtra\KoPackage\Environment\Exception\LocationException;
 use Symfony\Component\Dotenv\Dotenv;
 
 
