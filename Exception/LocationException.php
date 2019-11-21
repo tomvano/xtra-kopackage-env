@@ -1,6 +1,7 @@
 <?php
 
 namespace Xtra\KoPackage\Environment\Exception;
+use Exception, Throwable;
 
 final class LocationException extends Exception implements Throwable
 {
